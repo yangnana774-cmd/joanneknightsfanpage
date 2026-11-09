@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>相册 | Joanne Knights</title>
+    <meta
+      name="description"
+      content="Joanne Knights 佐安骑士团：Joanne Fu 符涵芊粉丝应援网站。"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <script src="gallery-config.js" defer></script>
+    <script src="gallery-feed.js" type="module"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main"
+      ><span class="" data-zh="跳至内容" data-en="Skip to content"
+        >跳至内容</span
+      ></a
+    >
+    <header>
+      <a class="logo" href="index.html"
+        ><img src="assets/logo.png" alt="Joanne Knights 佐安骑士团"
+      /></a>
+      <nav id="navigation" aria-label="Main">
+        <a href="index.html"
+          ><span class="" data-zh="首页" data-en="Home">首页</span></a
+        ><a href="about-us.html"
+          ><span class="" data-zh="关于我们" data-en="About Us"
+            >关于我们</span
+          ></a
+        ><a href="about-joanne.html"
+          ><span class="" data-zh="关于 Joanne" data-en="About Joanne"
+            >关于 Joanne</span
+          ></a
+        ><a href="fan-projects.html"
+          ><span class="" data-zh="应援企划" data-en="Fan Projects"
+            >应援企划</span
+          ></a
+        ><a href="gallery.html" aria-current="page"
+          ><span class="" data-zh="相册" data-en="Gallery">相册</span></a
+        ><a href="contact-us.html"
+          ><span class="" data-zh="联系我们" data-en="Contact Us"
+            >联系我们</span
+          ></a
+        ><a href="faq.html"
+          ><span class="" data-zh="常见问题" data-en="FAQ">常见问题</span></a
+        >
+      </nav>
+      <div class="controls">
+        <div class="languages" aria-label="Language">
+          <button data-lang="zh" lang="zh-CN">中文</button
+          ><button data-lang="en" lang="en">EN</button>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="navigation"
+          aria-label="菜单 / Menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-head">
+        <p class="eyebrow">04 / OUR GALLERY</p>
+        <h1
+          class=""
+          data-zh="光影之间，皆是 Joanne。"
+          data-en="Joanne, in every light and frame."
+        >
+          光影之间，皆是 Joanne。
+        </h1>
+        <p
+          class="intro"
+          data-zh="每一个瞬间，都值得被温柔珍藏。"
+          data-en="Every moment deserves to be gently treasured."
+        >
+          每一个瞬间，都值得被温柔珍藏。
+        </p>
+      </section>
+      <section class="section">
+        <div id="public-gallery" class="public-gallery-grid">
+          <button
+            class="gallery-item"
+            type="button"
+            aria-label="查看 Joanne 照片 / View Joanne photo"
+          >
+            <img src="assets/joanne-gallery.png" alt="Joanne Fu 符涵芊" /><span
+              class=""
+              data-zh="Joanne Fu · 珍藏瞬间 ♡"
+              data-en="Joanne Fu · Treasured moments ♡"
+              >Joanne Fu · 珍藏瞬间 ♡</span
+            >
+          </button>
+        </div>
+        <p id="gallery-status" class="small-note" role="status" hidden></p>
+        <button id="gallery-more" class="button secondary" type="button" hidden>
+          <span data-zh="查看更多照片" data-en="Load more photos"
+            >查看更多照片</span
+          >
+        </button>
+        <div class="gallery-note">
+          <p
+            class=""
+            data-zh="用照片收藏美好，以回忆记录成长。"
+            data-en="Collect beauty in photographs and trace growth through memories."
+          >
+            用照片收藏美好，以回忆记录成长。
+          </p>
+          <p
+            class=""
+            data-zh="更多属于 Joanne 的精彩瞬间，将陆续与大家分享。"
+            data-en="More wonderful moments of Joanne will be shared with you along the way."
+          >
+            更多属于 Joanne 的精彩瞬间，将陆续与大家分享。
+          </p>
+        </div>
+      </section>
+      <dialog id="lightbox">
+        <button class="close" aria-label="关闭 / Close">×</button
+        ><img src="assets/joanne-gallery.png" alt="Joanne Fu 符涵芊" />
+      </dialog>
+    </main>
+    <footer>
+      <div>
+        <strong>JOANNE KNIGHTS</strong>
+        <p
+          class=""
+          data-zh="One Joanne Thousand Knight"
+          data-en="One Joanne Thousand Knight"
+        >
+          One Joanne Thousand Knight
+        </p>
+      </div>
+      <div>
+        <p
+          class=""
+          data-zh="粉丝运营 · 非官方网站"
+          data-en="Fan-run · Unofficial website"
+        >
+          粉丝运营 · 非官方网站
+        </p>
+        <a href="contact-us.html"
+          ><span
+            class=""
+            data-zh="联系与内容更正"
+            data-en="Contact & corrections"
+            >联系与内容更正</span
+          ></a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
