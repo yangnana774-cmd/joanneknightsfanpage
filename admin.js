@@ -1,3 +1,4 @@
+import { createPhotoManager } from "./admin-photos.js";
 import {
   ALLOWED_TYPES,
   BUCKET,
@@ -16,6 +17,7 @@ const uploadButton = document.querySelector("#upload-button");
 const fileInput = document.querySelector("#photo");
 const preview = document.querySelector("#upload-preview");
 let client;
+let photoManager;
 let previewUrl;
 let busy = false;
 
@@ -25,6 +27,7 @@ function announce(message, error = false) {
 }
 
 function showLogin() {
+  photoManager?.hide();
   uploadPanel.hidden = true;
   loginPanel.hidden = false;
   uploadForm.reset();
@@ -46,6 +49,7 @@ async function checkAccess() {
     return null;
   }
   showUpload(user);
+  await photoManager.show();
   return user;
 }
 
@@ -179,6 +183,7 @@ uploadForm.addEventListener("submit", async (event) => {
         );
     }
     published = true;
+    await photoManager.refresh();
     uploadForm.reset();
     preview.hidden = true;
     if (previewUrl) URL.revokeObjectURL(previewUrl);
@@ -219,6 +224,7 @@ async function initialize() {
       );
       return;
     }
+    photoManager = createPhotoManager(client);
     document.querySelector("#email").disabled = false;
     document.querySelector("#password").disabled = false;
     loginButton.disabled = false;
