@@ -855,4 +855,14 @@ footer .admin-entry {
   text-decoration: none;
   font-size: 13px;
 }
-footer .admin-entry:hover { background: #f3dce8; }
+footer .admin-entry:hover {
+  background: #f3dce8;
+}
+
+.forgot-password-link {
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+.forgot-password-link .text-link {
+  font-size: 14px;
+}
