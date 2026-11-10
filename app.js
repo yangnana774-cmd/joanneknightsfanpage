@@ -16,6 +16,7 @@ function setLanguage(lang) {
     );
   const active = document.querySelector("nav [aria-current] span");
   if (active) document.title = active.textContent + " | Joanne Knights";
+  document.dispatchEvent(new CustomEvent("jk-language-change"));
   try {
     localStorage.setItem("jk-language", lang);
   } catch {}
@@ -40,13 +41,19 @@ document.addEventListener("keydown", (e) => {
 });
 const dialog = document.querySelector("#lightbox");
 if (dialog) {
-  document
-    .querySelector(".gallery-item")
-    .addEventListener("click", () => dialog.showModal());
+  document.addEventListener("click", (event) => {
+    const item = event.target.closest(".gallery-item");
+    if (!item) return;
+    const source = item.querySelector("img");
+    const full = dialog.querySelector("img");
+    full.src = source.src;
+    full.alt = source.alt;
+    if (!dialog.open) dialog.showModal();
+  });
   dialog
     .querySelector(".close")
     .addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (e) => {
-    if (e.target === dialog) dialog.close();
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
   });
 }

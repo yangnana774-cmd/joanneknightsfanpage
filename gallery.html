@@ -10,6 +10,8 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="app.js" defer></script>
+    <script src="gallery-config.js" defer></script>
+    <script src="gallery-feed.js" type="module"></script>
   </head>
   <body>
     <a class="skip" href="#main"
@@ -80,16 +82,24 @@
         </p>
       </section>
       <section class="section">
-        <button
-          class="gallery-item"
-          type="button"
-          aria-label="查看 Joanne 照片 / View Joanne photo"
-        >
-          <img src="assets/joanne-gallery.png" alt="Joanne Fu 符涵芊" /><span
-            class=""
-            data-zh="Joanne Fu · 珍藏瞬间 ♡"
-            data-en="Joanne Fu · Treasured moments ♡"
-            >Joanne Fu · 珍藏瞬间 ♡</span
+        <div id="public-gallery" class="public-gallery-grid">
+          <button
+            class="gallery-item"
+            type="button"
+            aria-label="查看 Joanne 照片 / View Joanne photo"
+          >
+            <img src="assets/joanne-gallery.png" alt="Joanne Fu 符涵芊" /><span
+              class=""
+              data-zh="Joanne Fu · 珍藏瞬间 ♡"
+              data-en="Joanne Fu · Treasured moments ♡"
+              >Joanne Fu · 珍藏瞬间 ♡</span
+            >
+          </button>
+        </div>
+        <p id="gallery-status" class="small-note" role="status" hidden></p>
+        <button id="gallery-more" class="button secondary" type="button" hidden>
+          <span data-zh="查看更多照片" data-en="Load more photos"
+            >查看更多照片</span
           >
         </button>
         <div class="gallery-note">
