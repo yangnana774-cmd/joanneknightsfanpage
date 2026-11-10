@@ -840,3 +840,19 @@ details p {
     font-size: 11px;
   }
 }
+
+/* Public link to the authenticated administrator page. */
+footer .admin-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 8px 15px;
+  border: 1px solid #d9bacb;
+  border-radius: 8px;
+  background: #fff7fb;
+  color: #744056;
+  text-decoration: none;
+  font-size: 13px;
+}
+footer .admin-entry:hover { background: #f3dce8; }
