@@ -873,3 +873,7 @@ footer .admin-entry:hover {
 .managed-photos img { width: 100%; height: 240px; object-fit: contain; background: var(--paper); }
 .managed-photos p { overflow-wrap: anywhere; margin: 12px 0; }
 .delete-photo { background: #f9e4ed; border: 1px solid #b4778d; }
+
+/* Keep long contact details readable on mobile. */
+.contact-cards article { min-width: 0; }
+.contact-detail { overflow-wrap: anywhere; }
